@@ -12,17 +12,16 @@ jobs:
     env:
       WORKDIR: "TODO"
       CONFIG: "TODO"
-      AZURE_FUNCTIONAPP_NAME: "TODO"
+      AZURE_FUNCTIONAPP_NAME: "func6"
     defaults:
       run:
         working-directory: ${{env.WORKDIR}}
 
     steps:
     - name: "Checkout"
+      uses: actions/checkout@v2
 
-    - name: Setup .NET
 
     - name: Build and Test a project
-
-    - name: 'Run Azure Functions Action'
-
+      run: dotnet build ./src/HelloWorld/HellowWorld.csproj --configuration Release --output ./drop
+  
