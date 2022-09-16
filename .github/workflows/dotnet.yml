@@ -26,6 +26,10 @@ jobs:
     - name: "Checkout"
       uses: actions/checkout@v2
 
+    - name: "Install dotnet 6"
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.0.x'
 
     - name: Build and Test a project
       run: dotnet publish ./src/HelloWorld/HellowWorld.csproj --configuration Release --output ./drop
