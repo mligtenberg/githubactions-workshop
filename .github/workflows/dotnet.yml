@@ -14,10 +14,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      WORKDIR: "TODO"
-      CONFIG: "TODO"
-      AZURE_FUNCTIONAPP_NAME: "func6"
     defaults:
       run:
         working-directory: ${{env.WORKDIR}}
