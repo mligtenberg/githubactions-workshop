@@ -1,8 +1,9 @@
 name: .NET
 
 on:
- # Configureer triggers voor een push op de main branch
- # Configureer triggers voor een pull request
+  push:
+    branches:
+      - main
   pull_request:
     branches:    
     - main
