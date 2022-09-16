@@ -21,7 +21,10 @@ jobs:
       with:
         dotnet-version: '6.0.x'
 
-    - name: Build and Test a project
+    - name: Test the project
+      run: dotnet test ./src/HelloWorld/HelloWorld.csproj --configuration Release --output ./drop
+
+    - name: Publish the project
       run: dotnet publish ./src/HelloWorld/HelloWorld.csproj --configuration Release --output ./drop
   
     - name: Publish release as artifect
