@@ -23,7 +23,7 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Test the project
-      run: dotnet test ./src/HelloWorld/HelloWorld.csproj --configuration Release --output ./drop
+      run: dotnet test ./src/HelloWorld.sln --configuration Release --output ./drop
 
     - name: Publish the project
       run: dotnet publish ./src/HelloWorld/HelloWorld.csproj --configuration Release --output ./drop
