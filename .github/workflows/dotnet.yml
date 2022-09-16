@@ -4,6 +4,14 @@ on:
  # Configureer triggers voor een push op de main branch
  # Configureer triggers voor een pull request
  # Configureer een trigger voor een handmatige build
+  workflow_dispatch:
+    inputs:
+      releaseTitle:
+        description: "Release title"
+        required: true
+      tagVersion:
+        description: "Tag version"
+        required: true
 
 jobs:
   build:
