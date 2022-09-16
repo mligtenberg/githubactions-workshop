@@ -24,3 +24,9 @@ jobs:
     - name: Build and Test a project
       run: dotnet publish ./src/HelloWorld/HelloWorld.csproj --configuration Release --output ./drop
   
+    - name: Publish release as artifect
+      uses: actions/upload-artifact@v2
+      with:
+        name: function
+        path: drop
+
